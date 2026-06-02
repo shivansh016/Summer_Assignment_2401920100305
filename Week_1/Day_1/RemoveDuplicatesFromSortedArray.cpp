@@ -1,5 +1,8 @@
 //Brute force 
 //using set (Onlogn) .. since insert in set requires O(logn)
+#include<bits/stdc++.h>
+using namespace std;
+
 
 class Solution {
 public:

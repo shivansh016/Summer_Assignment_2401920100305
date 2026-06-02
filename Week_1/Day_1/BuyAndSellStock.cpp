@@ -3,7 +3,8 @@
 // then calculated the best for for indices 1 to n-1 _> bestbuy [i]  = min(bestbuy[i-1] , prices[i-1])
 
 //then we calculated the currProfit and maxProfit.. traversing the bestbuy vector... and return the maxProfit.
-
+#include<bits/stdc++.h>
+using namespace std;
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
