@@ -1,5 +1,29 @@
 #include<bits/stdc++.h>
 using namespace std;
+//Optimized
+class Solution {
+public:
+//t.c. O(n.klogk) {if n= no. of strings, k= length of string , as we are sorting each string klogk and as we loop them all => nklogk}
+//s.c. O(n.k)
+    vector<vector<string>> groupAnagrams(vector<string>& strs) {
+        unordered_map<string, vector<string>> mp;
+        vector<vector<string>> ans;
+
+        for(string s : strs){
+            string st = s;
+            sort(st.begin(), st.end());
+            mp[st].push_back(s);
+        }
+
+        for(pair<string, vector<string>> p : mp){
+            ans.push_back(p.second);
+        }
+
+        return ans;
+    }
+};
+
+
 //brute force
 //this approach is correct but has very high t.c. ... need to be done using hash maps...
 
